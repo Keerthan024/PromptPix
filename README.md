@@ -1,8 +1,8 @@
-# Promptpix 🎨🧠
+# PromptPix 🎨🧠
 
 ## Project Overview
 
-**Promptpix** is a full-stack AI-powered SaaS application built using **MongoDB**, **Express.js**, **React.js**, and **Node.js**. It allows users to convert text prompts into AI-generated images using the **ClipDrop API**. The platform includes a **credit system** where each image generation costs 1 credit. Users can purchase more credits through an integrated **online payment gateway**.
+**PromptPix** is a full-stack AI-powered SaaS application built using **MongoDB**, **Express.js**, **React.js**, and **Node.js**. It allows users to convert text prompts into AI-generated images using the **ClipDrop API**. The platform includes a **credit system** where each image generation costs 1 credit. Users can purchase more credits through an integrated **online payment gateway**.
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## 🎯 Main Goal
 
-To provide users with a seamless and creative platform where they can bring their imagination to life using AI-generated images. **Promptpix** also introduces a credit-based model with real-time payment processing, making it a complete SaaS product.
+To provide users with a seamless and creative platform where they can bring their imagination to life using AI-generated images. **PromptPix** also introduces a credit-based model with real-time payment processing, making it a complete SaaS product.
 
 ---
 
@@ -39,7 +39,7 @@ To provide users with a seamless and creative platform where they can bring thei
 | Database       | MongoDB + Mongoose       |
 | Authentication | JWT + Bcrypt             |
 | AI API         | ClipDrop (Text to Image) |
-| Payments       | Razorpay or Stripe       |
+| Payments       | Razorpay   |
 | Deployment     | Vercel (Frontend), Render/Heroku (Backend) |
 
 ---
@@ -49,13 +49,13 @@ To provide users with a seamless and creative platform where they can bring thei
 ### Prerequisites
 
 - Node.js (v14 or higher)
-- npm or yarn
+- npm 
 - MongoDB Atlas account
 - ClipDrop API Key
-- Razorpay or Stripe API Keys
+- Razorpay API Keys
 
 ### Installation
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/promptpix.git
+git clone https://github.com/keerthan0024/promptpix.git
