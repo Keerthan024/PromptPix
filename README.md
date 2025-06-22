@@ -8,7 +8,7 @@
 
 ## 🌐 Live Demo
 
-🚀 Coming Soon: [https://your-promptpix-url.com](https://your-promptpix-url.com)
+🚀 Coming Soon: https://prompt-pix-user.vercel.app/
 
 ---
 
@@ -58,4 +58,4 @@ To provide users with a seamless and creative platform where they can bring thei
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/keerthan0024/promptpix.git
+git clone https://github.com/Keerthan024/PromptPix.git
