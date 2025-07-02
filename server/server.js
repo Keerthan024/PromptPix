@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/mongodb.js";
 import userRouter from "./routes/userRoutes.js";
+import imageRouter from "./routes/imageRoutes.js";
 
 // Initialize Express
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 // Routes
 app.get("/", (req, res) => res.send("API Working"));
 app.use('/api/user', userRouter)
+app.use('/api/image', imageRouter)
 
 // Port
 const PORT = process.env.PORT || 4000;
