@@ -7,6 +7,8 @@ import star_icon from './star_icon.svg'
 import rating_star from './rating_star.svg'
 import sample_img_1 from './sample_img_1.png'
 import sample_img_2 from './sample_img_2.png'
+import sample_img_3 from './sample_img_3.png'
+import sample_img_4 from './sample_img_4.png'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
 import step_icon_1 from './step_icon_1.svg'
@@ -29,6 +31,8 @@ export const assets = {
     rating_star,
     sample_img_1,
     sample_img_2,
+    sample_img_3,
+    sample_img_4,
     email_icon,
     lock_icon,
     cross_icon,
@@ -65,10 +69,10 @@ export const testimonialsData = [
     },
     {
         image:profile_img_2,
-        name:'Richard Nelson',
-        role:'Content Creator',
+        name:'K C Ayush',
+        role:'Data science Student',
         stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        text:`I found it very useful in the era of AI where All works are done using AI. I prefer to use it because it is user-friendly and Attractive UI.`
     },
     {
         image:profile_img_1,
