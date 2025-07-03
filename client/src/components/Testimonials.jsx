@@ -191,9 +191,9 @@ const Testimonials = () => {
         }}
       >
         {[
-          { value: "10K+", label: "Happy Users" },
+          { value: "1K+", label: "Happy Users" },
           { value: "4.9", label: "Average Rating" },
-          { value: "1M+", label: "Images Created" },
+          { value: "1K+", label: "Images Created" },
           { value: "24/7", label: "Support" }
         ].map((stat, i) => (
           <motion.div

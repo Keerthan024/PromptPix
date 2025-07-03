@@ -181,7 +181,7 @@ const Description = () => {
               }}
             >
               {[
-                { value: "10M+", label: "Images generated" },
+                { value: "1K+", label: "Images generated" },
                 { value: "99%", label: "Satisfaction rate" },
                 { value: "2s", label: "Average generation" },
                 { value: "4.9/5", label: "User rating" }
