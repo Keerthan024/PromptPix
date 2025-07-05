@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { stepsData } from "../assets/assets";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { AppContext } from "../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const Steps = () => {
+  const { user, setShowLogin } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+    if (user) {
+      navigate("/result");
+    } else {
+      setShowLogin(true);
+    }
+  };
   return (
     <section className="relative py-24 px-6 overflow-hidden">
       {/* Decorative background elements */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 -z-10 overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -19,7 +31,7 @@ const Steps = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +52,10 @@ const Steps = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            How It <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Works</span>
+            How It{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+              Works
+            </span>
           </motion.h1>
           <motion.p
             className="text-lg text-gray-500 max-w-2xl mx-auto"
@@ -48,7 +63,8 @@ const Steps = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Transform your ideas into stunning visuals in just a few simple steps
+            Transform your ideas into stunning visuals in just a few simple
+            steps
           </motion.p>
         </motion.div>
 
@@ -81,20 +97,26 @@ const Steps = () => {
                 >
                   <motion.div
                     className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 hover:opacity-100 transition-opacity duration-300"
-                    animate={{ 
+                    animate={{
                       rotate: [0, 360],
-                      scale: [1, 1.1, 1]
+                      scale: [1, 1.1, 1],
                     }}
-                    transition={{ 
+                    transition={{
                       rotate: { repeat: Infinity, duration: 8, ease: "linear" },
-                      scale: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+                      scale: {
+                        repeat: Infinity,
+                        duration: 3,
+                        ease: "easeInOut",
+                      },
                     }}
                   />
-                  <span className="text-2xl font-bold text-gray-700">{index + 1}</span>
+                  <span className="text-2xl font-bold text-gray-700">
+                    {index + 1}
+                  </span>
                 </motion.div>
 
                 {/* Step content */}
-                <motion.div 
+                <motion.div
                   className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-100 shadow-sm flex-1 w-full"
                   whileHover={{ y: -5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -107,7 +129,9 @@ const Steps = () => {
                       <img src={step.icon} alt="" className="w-8 h-8" />
                     </motion.div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {step.title}
+                      </h3>
                       <p className="text-gray-600">{step.description}</p>
                     </div>
                   </div>
@@ -127,17 +151,22 @@ const Steps = () => {
         >
           <motion.p
             className="text-gray-500 mb-6"
-            animate={{ 
-              textShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 8px rgba(59,130,246,0.2)", "0 0 0px rgba(0,0,0,0)"]
+            animate={{
+              textShadow: [
+                "0 0 0px rgba(0,0,0,0)",
+                "0 0 8px rgba(59,130,246,0.2)",
+                "0 0 0px rgba(0,0,0,0)",
+              ],
             }}
-            transition={{ 
+            transition={{
               duration: 4,
-              repeat: Infinity
+              repeat: Infinity,
             }}
           >
             Ready to create something amazing?
           </motion.p>
           <motion.button
+            onClick={onClickHandler}
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition-all"
             whileHover={{ y: -2, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
